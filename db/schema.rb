@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140816215745) do
   create_table "inquiries", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.text     "inquiry"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
