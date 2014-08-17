@@ -4,8 +4,12 @@ class InquiriesController < ApplicationController
 	end
 
 	def create
-		raise inquiry_params.inspect
-		@inquiry = Inquiry.new
+		@inquiry = Inquiry.new(inquiry_params)
+		if @inquiry.save
+			redirect_to root_path
+		else
+			redirect_to root_path
+		end
 
 	end
 
