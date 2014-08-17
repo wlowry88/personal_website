@@ -356,13 +356,13 @@
 					
 					<!--=== Contact Form ===-->
 
-					<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="contact.php" method="post" novalidate>
+					<form id="contact-form" class="col-sm-7 scrollimation fade-left" action="/inquiries" method="POST" novalidate>
 						
 						<div class="form-group">
-						  <label class="control-label" for="contact-name">Name</label>
+						  <label class="control-label" for="inquiry[name]">Name</label>
 						  <div class="controls">
 							<i class="icon-user"></i>
-							<input id="contact-name" name="contactName" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
+							<input id="contact-name" name="inquiry[name]" placeholder="My name is..." class="form-control input-lg requiredField" type="text" data-error-empty="Please enter your name">
 						  </div>
 						</div><!-- End name input -->
 						
@@ -381,7 +381,7 @@
 								<textarea id="contact-message" name="comments"  placeholder="I wanna talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
 							</div>
 						</div><!-- End textarea -->
-						
+						<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
 						<p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="icon-location-arrow"></i>Send Message</button></p>
 						<input type="hidden" name="submitted" id="submitted" value="true" />
 						
