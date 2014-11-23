@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hey Will, because you're the fucking man, <%= @inquiry.name %> wants to contact you about development.</p>
+      <br>
+    <p>This was the subject: <%= @inquiry.text %></p>
+      <br>
+    <p>Email them back: <a href="mailto:<%= @inquiry.email %>"><%= @inquiry.email %></a></p>
+  </body>
+</html>
